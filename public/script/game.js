@@ -37,17 +37,19 @@ class gameManager {
     }
 
     validateButtons() {
-        try{
-            rollButton = document.getElementById("rollButton");
-            holdButton = document.getElementById("holdButton");
+        try {
+            holdButton = document.getElementById("main-button-hold");
+            rollButton = document.getElementById("main-button-roll");
+            newGameButton = document.getElementById("main-button-new-game");
             return true;
         }
-        catch(err){
-            console.log("Buttons not found");
+        catch (err) {
+            console.log("Buttons not found", err);
             return false;
         }
     }
 
+    // William
     alternateTurn() {
         if (this.currentPlayer == 1) {
             this.currentPlayer = 2;
@@ -56,6 +58,7 @@ class gameManager {
         }
     }
 }
+
 
 player01 = new player(1);
 player02 = new player(2);

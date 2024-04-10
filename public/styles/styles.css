@@ -1,25 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Tilt+Neon&display=swap");
 * {
+  font-family: "Tilt Neon", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  background: #870000;
+  background: linear-gradient(to right, #870000, #190A05, #870000);
+}
+
 body {
-  background: #a8c0ff;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3f2b96, #a8c0ff);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #333;
 }
 
-.dice-controls {
+.main-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+.main-container .player-container {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.75s;
+  text-align: center;
+  height: 100%;
+}
+.main-container .player-container .player {
+  width: 100%;
+  height: 50%;
+}
+.main-container .name {
+  font-size: 3rem;
+}
+.main-container .player-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: #000000;
+  padding: 100px;
+  width: 65%;
+  height: 100%;
+  border-radius: 15px;
+  color: #fff;
+  border: 2px solid #870000;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+.main-container .player-wrapper #total-points {
+  font-size: 3rem;
+}
+.main-container .player-wrapper .current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: white;
+  padding: 1rem;
+}
+.main-container .player-wrapper .current-score {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.main-container .buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.main-container .btn {
+  transition-duration: 0.3s;
+  background-color: #fff;
+  border: none;
+  padding: 20px 50px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  margin: 10px;
+}
+.main-container .btn:hover {
+  cursor: pointer;
+  color: white;
+  scale: 1.05;
+  background: black;
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 10px #ff0000;
+}
+.main-container #main-button-new-game {
+  top: 70%;
+}
+.main-container #main-button-roll {
+  top: 45%;
+}
+.main-container #main-button-hold {
+  top: 55%;
+}
+.main-container .dice {
+  position: absolute;
+  top: 15%;
+  height: 10rem;
+  animation: spinDice 0.75s infinite linear;
+}
+.main-container .hidden {
+  display: none;
 }
 
-#player1vsplayer2 {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+@keyframes spinDice {
+  0% {
+    transform: rotate(0deg);
+    scale: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    scale: 1.2;
+  }
+  100% {
+    transform: rotate(360deg);
+    scale: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */
