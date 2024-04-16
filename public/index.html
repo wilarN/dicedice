@@ -6,29 +6,29 @@
     <meta authors="William Johnsson, Rasmus Nyström, Simon Fredriksson, Gabriel Nordqvist">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/public/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
     <title>Super duper dice</title>
 </head>
 
 <body>
-    <!-- Rasmus & William -->
+    <!-- Rasmus & William & Gabbe -->
     <div class='main-container'>
         <div class="player-container">
-            <img src="/public/img/01dice.svg" alt="dice" draggable='false' class="dice" />
+            <img src="/img/01dice.svg" alt="dice" draggable='false' class="dice" />
             <div class="player">
                 <div class="player-wrapper">
                     <h1 class="name">PLAYER 1</h1>
                     <p class="current-label">Total Points</p>
-                    <span id='total-points'>0</span>
-                    <p class="current-score">Current <br>0</p>
+                    <span id='total-points' class='total00'>0</span>
+                    <p class="current-score current-score00">Current Points <br>0</p>
                 </div>
             </div>
             <div class="player">
                 <div class="player-wrapper">
                     <h1 class="name">PLAYER 2</h1>
                     <p class="current-label">Total Points</p>
-                    <span id='total-points'>0</span>
-                    <p class="current-score">Current <br>0</p>
+                    <span id='total-points' class='total01'>0</span>
+                    <p class="current-score current-score01">Current Points <br>0</p>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
             <button class="btn" id='main-button-new-game'>New Game</button>
         </div>
     </div>
-    <script src="/public/script/game.js" defer></script>
+    <script src="/script/game.js" defer></script>
 </body>
 
 </html>

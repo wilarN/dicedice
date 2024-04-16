@@ -110,7 +110,6 @@ body {
   position: absolute;
   top: 15%;
   height: 10rem;
-  animation: spinDice 0.75s infinite linear;
 }
 .main-container .hidden {
   display: none;
