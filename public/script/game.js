@@ -106,9 +106,12 @@ class player {
         
         this.points += this.tempPoints;
         console.log(this.playerNum)
-        const totalScore = document.getElementsByClassName(`total0${this.playerNum}`)[0];
-        totalScore.innerHTML = "Total Points <br>" + this.tempPoints;
         this.tempPoints = 0;
+        const totalScore = document.getElementsByClassName(`total0${this.playerNum}`)[0];
+
+        totalScore.innerHTML = "Total Points <br>" + this.points;
+        
+        
         this.turn = false;
         gameManager.alternateTurn();
     }
