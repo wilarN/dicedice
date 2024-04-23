@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Tilt+Neon&display=swap');
 
+// William
 $main-hover-color: #ff0000;
 
 @mixin flex-center {
@@ -23,6 +24,43 @@ html {
 
 body {
     color: #333;
+}
+
+.win-container{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    @include flex-center;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    background-color: #000000e8;
+    border-radius: 20px;
+    border: 2px solid $main-hover-color;
+    box-shadow: 0 0 10px $main-hover-color;
+    h1{
+        color: rgb(255, 255, 255);
+        font-size: 3rem;
+    }
+    button{
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition-duration: 0.3s;
+        &:hover {
+            cursor: pointer;
+            color: white;
+            scale: 1.05;
+            background: black;
+            border: 2px solid $main-hover-color;
+            box-shadow: 0 0 10px $main-hover-color;
+        }
+    
+    }
 }
 
 .main-container {
@@ -151,5 +189,19 @@ body {
     100% {
         transform: rotate(360deg);
         scale: 1.0;
+    }
+}
+
+@keyframes winPopup {
+    0% {
+        scale: 1;
+    }
+
+    50%{
+        scale: 1.2;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
