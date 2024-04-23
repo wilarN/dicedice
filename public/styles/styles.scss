@@ -26,7 +26,7 @@ body {
     color: #333;
 }
 
-.win-container{
+.win-container {
     display: none;
     position: absolute;
     top: 20%;
@@ -39,11 +39,13 @@ body {
     border-radius: 20px;
     border: 2px solid $main-hover-color;
     box-shadow: 0 0 10px $main-hover-color;
-    h1{
+
+    h1 {
         color: rgb(255, 255, 255);
         font-size: 3rem;
     }
-    button{
+
+    button {
         margin-top: 20px;
         padding: 10px 20px;
         font-size: 1.5rem;
@@ -51,6 +53,7 @@ body {
         border: none;
         border-radius: 5px;
         transition-duration: 0.3s;
+
         &:hover {
             cursor: pointer;
             color: white;
@@ -59,7 +62,7 @@ body {
             border: 2px solid $main-hover-color;
             box-shadow: 0 0 10px $main-hover-color;
         }
-    
+
     }
 }
 
@@ -103,7 +106,7 @@ body {
         text-align: center;
         transition-duration: 0.4s;
 
-        #total-points{
+        #total-points {
             font-size: 3rem;
         }
 
@@ -114,12 +117,12 @@ body {
             color: white;
             padding: 1rem;
         }
-    
+
         .current-score {
             font-size: 2rem;
             padding: 1rem;
         }
-    
+
     }
 
     .buttons-wrapper {
@@ -175,6 +178,50 @@ body {
 }
 
 
+@media screen and (max-width: 1500px) {
+    .main-container {
+        .player-container {
+            flex-direction: column;
+            justify-content: space-between;
+
+            .player {
+                height: 30dvh;
+                
+                .player-wrapper{
+                    flex-direction: column;
+                    height: 75%;
+                    h1{
+                        font-size: 1.7rem;
+                    }
+                    #total-points{
+                        font-size: 1.4rem;
+                    }
+
+                    .current-score{
+                        font-size: 1.2rem;
+                    
+                    }
+                }
+            }
+        }
+
+        .buttons-wrapper {
+            @include flex-center;
+            flex-direction: row;
+            align-items: center;
+
+
+        }
+
+        .dice {
+            position: static;
+            margin-bottom: 40px;
+        }
+
+    }
+
+}
+
 @keyframes spinDice {
     0% {
         transform: rotate(0deg);
@@ -197,7 +244,7 @@ body {
         scale: 1;
     }
 
-    50%{
+    50% {
         scale: 1.2;
     }
 

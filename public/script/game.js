@@ -139,6 +139,7 @@ class gameManager {
         this.currentPlayer = 0;
         this.players = players;
         playerWrappers[0].style.boxShadow = "0px 0px 20px 5px white";
+        playerWrappers[0].style.scale = "1.1";
         playerWrappers[1].style.boxShadow = "none";
     }
 
@@ -148,11 +149,15 @@ class gameManager {
             console.log("Player 2's turn");
             // Glow on active player
             playerWrappers[1].style.boxShadow = "0px 0px 10px 5px white";
+            playerWrappers[1].style.scale = "1.1";
+            playerWrappers[0].style.scale = "1.0";
             playerWrappers[0].style.boxShadow = "none";
         } else {
             this.currentPlayer = 0;
             console.log("Player 1's turn");
             playerWrappers[0].style.boxShadow = "0px 0px 10px 5px white";
+            playerWrappers[1].style.scale = "1.0";
+            playerWrappers[0].style.scale = "1.1";
             playerWrappers[1].style.boxShadow = "none";
         }
     }

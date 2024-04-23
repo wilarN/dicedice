@@ -153,6 +153,39 @@ body {
   display: none;
 }
 
+@media screen and (max-width: 1500px) {
+  .main-container .player-container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .main-container .player-container .player {
+    height: 30dvh;
+  }
+  .main-container .player-container .player .player-wrapper {
+    flex-direction: column;
+    height: 75%;
+  }
+  .main-container .player-container .player .player-wrapper h1 {
+    font-size: 1.7rem;
+  }
+  .main-container .player-container .player .player-wrapper #total-points {
+    font-size: 1.4rem;
+  }
+  .main-container .player-container .player .player-wrapper .current-score {
+    font-size: 1.2rem;
+  }
+  .main-container .buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+  }
+  .main-container .dice {
+    position: static;
+    margin-bottom: 40px;
+  }
+}
 @keyframes spinDice {
   0% {
     transform: rotate(0deg);
