@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Tilt+Neon&display=swap');
 
-// William
+// William & Gabriel
 $main-hover-color: #ff0000;
 
 @mixin flex-center {
@@ -89,7 +89,7 @@ body {
 
 
     .name {
-        font-size: 3rem;
+        font-size: 2.1rem;
     }
 
     .player-wrapper {
@@ -178,49 +178,86 @@ body {
 }
 
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
     .main-container {
         .player-container {
-            flex-direction: column;
-            justify-content: space-between;
+            @include flex-center();
+            align-items: center;
+            align-items: center;
+            text-align: center;
 
             .player {
-                height: 30dvh;
-                
-                .player-wrapper{
-                    flex-direction: column;
-                    height: 75%;
-                    h1{
-                        font-size: 1.7rem;
-                    }
-                    #total-points{
-                        font-size: 1.4rem;
-                    }
-
-                    .current-score{
-                        font-size: 1.2rem;
-                    
-                    }
-                }
+                @include flex-center();
+                height: auto;
             }
         }
 
-        .buttons-wrapper {
+        .player-wrapper {
             @include flex-center;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            padding: 0px;
+            margin: 0px;
+            width: 96%;
 
 
+            .current-label {
+                font-size: 1.2rem;
+            }
+
+            #total-points {
+                font-size: 2rem;
+            }
+
+            .current-score {
+                font-size: 1.5rem;
+            }
+        }
+
+        .player {
+            width: 100%;
+        }
+
+
+        .name {
+            font-size: 2rem;
+        }
+
+        .buttons-wrapper {
+            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            .btn{
+                padding: 10px 20px;
+                font-size: 1.4rem;
+            }
         }
 
         .dice {
-            position: static;
-            margin-bottom: 40px;
+            top: 5%;
+            height: 7rem;
         }
-
     }
 
+    .win-container {
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+        }
+    }
 }
+
 
 @keyframes spinDice {
     0% {

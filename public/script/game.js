@@ -1,7 +1,7 @@
 
 // William
 
-const pointsToWin = 100;
+const pointsToWin = 10;
 
 holdButton = document.getElementById("main-button-hold");
 rollButton = document.getElementById("main-button-roll");
@@ -12,6 +12,7 @@ playerTempScores = document.getElementsByClassName("current-score");
 newGameWinButton = document.getElementById("win-button");
 winContainer = document.getElementsByClassName("win-container")[0];
 
+// Gabriel
 function fetchRandomNumber(tempPrevNum = 0) {
     num = Math.floor(Math.random() * 6) + 1;
     if (tempPrevNum == 0) {
@@ -80,6 +81,7 @@ class player {
                 this.tempPoints += 4;
                 this.turn = false;
             }
+            // Gabriel
             if (dice == 5) {
                 diceImg.src = "img/05dice.svg";
                 console.log("Rolled 5")
@@ -121,6 +123,7 @@ class player {
             winContainer.style.animation = "winPopup 1s ease-in-out";
         }
 
+        // Gabriel
         for (let i = 0; i < playerTempScores.length; i++) {
             playerTempScores[i].innerHTML = "Current Points <br> 0";
         }
@@ -153,6 +156,7 @@ class gameManager {
             playerWrappers[0].style.scale = "1.0";
             playerWrappers[0].style.boxShadow = "none";
         } else {
+            // Gabriel
             this.currentPlayer = 0;
             console.log("Player 1's turn");
             playerWrappers[0].style.boxShadow = "0px 0px 10px 5px white";
