@@ -159,7 +159,7 @@ body {
     justify-content: center;
     align-items: center;
     align-items: center;
-    align-items: center;
+    justify-content: space-evenly;
     text-align: center;
   }
   .main-container .player-container .player {
@@ -167,6 +167,7 @@ body {
     justify-content: center;
     align-items: center;
     height: auto;
+    width: 30%;
   }
   .main-container .player-wrapper {
     display: flex;

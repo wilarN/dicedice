@@ -123,7 +123,7 @@ class player {
             winContainer.style.animation = "winPopup 1s ease-in-out";
         }
 
-        // Gabriel
+        // Gabriel & Rasmus
         for (let i = 0; i < playerTempScores.length; i++) {
             playerTempScores[i].innerHTML = "Current Points <br> 0";
         }

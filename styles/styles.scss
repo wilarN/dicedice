@@ -183,12 +183,13 @@ body {
         .player-container {
             @include flex-center();
             align-items: center;
-            align-items: center;
+            justify-content: space-evenly;
             text-align: center;
 
             .player {
                 @include flex-center();
                 height: auto;
+                width: 30%;
             }
         }
 
