@@ -1,7 +1,7 @@
 
 // William
 
-const pointsToWin = 100;
+const pointsToWin = 50;
 
 holdButton = document.getElementById("main-button-hold");
 rollButton = document.getElementById("main-button-roll");
